@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: calibri;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.aside{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(36, 38, 46);
+    transition: .4s;
+}
+.aside header{
+    font-size: 24px;
+    color: white;
+    text-align: center;
+   line-height: 70px;
+   user-select: none;
+   background-color: rgb(79, 88, 104);
+}
+.aside ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    color: white;
+    padding-left: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    
+}
+ul li:hover a{
+    padding-left: 40px;
+    transition:all .3s;
+}
+.aside ul li i{
+    margin-right:16px ;
+}
+#check{
+    display: none;
+}
+#btn,#cancel{
+    position: fixed;
+    cursor: pointer;
+    background-color: rgb(50, 47, 65);
+    color: white;
+    border-radius: 10px;
+    padding: 4px 10px;
+    transition: all.4s;
+}
+#btn{
+    left: 40px;
+    top: 15px;
+    font-size: 35px;
+    
+
+}
+#cancel{
+    z-index: 1;
+    left: -210px;
+    top: 10px;
+
+}
+#check:checked ~ .aside{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+pointer-events: none;
+
+}
+#check:checked ~ label #cancel{
+    left: 210px;
+
+
+}
+section{
+    background: url(hustle.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .4s;
+    
+}
+#check:checked ~ section{
+    margin-left: 250px;
+    opacity: 0.9;
+   
+}
+section h1{
+    line-height: 70px;
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-decoration: underline;
+
+}
+section article{
+    width: 70%;
+    float: left;
+    margin-bottom: 30px;
+    
+}
+section article div{
+    padding: 10px 15px;
+    border-right: 1px solid black;
+}
+section aside{
+    width: 30%;
+    float: left;
+    
+}
+section aside div{
+    padding: 10px 15px;
+   
+}
